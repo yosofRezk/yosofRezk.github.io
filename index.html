@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Youssof Rezk — WordPress Developer</title>
+  <meta name="description" content="Youssof Rezk, WordPress Developer in Mansoura, Egypt. Custom themes, plugins, WooCommerce and performance-optimized multilingual websites.">
+
+  <!-- Open Graph & Meta Tags -->
+  <meta property="og:title" content="Youssof Rezk — WordPress Developer">
+  <meta property="og:description" content="Custom WordPress themes, plugins, WooCommerce and speed-optimized websites.">
+  <meta property="og:type" content="website">
+
+  <!-- Typography & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Syne:wght@400;700;800&family=Cairo:wght@300;400;600;700;800&display=swap">
+
+  <!-- Modular Design System Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div id="sp-bar" role="progressbar" aria-label="Page reading progress"></div>
+
+  <!-- Hero Container -->
+  <header class="hero-container" id="hero">
+    <div class="glowing-columns" id="cols" aria-hidden="true"></div>
+    <div class="hero-fondo3d" aria-hidden="true"></div>
+    <div class="hero-lastre" id="lastre" aria-hidden="true"></div>
+
+    <!-- Navigation Header -->
+    <nav class="top-nav" aria-label="Main Navigation">
+      <div class="top-nav-left">
+        <a class="logo" href="#hero" aria-label="Youssof Rezk">
+          <b>YR</b>
+          <span>YOUSSOF REZK<small><span data-i18n="nav_dev">WORDPRESS DEVELOPER</span></small></span>
+        </a>
+      </div>
+      <div class="top-nav-right">
+        <div class="nav-actions">
+          <div class="nav-cluster">
+            <div class="lang-switch">
+              <span class="lang-label" data-lang="en">EN</span>
+              <label class="switch" aria-label="Language: English / العربية">
+                <input type="checkbox" id="lang-toggle">
+                <span class="slider"></span>
+              </label>
+              <span class="lang-label" data-lang="ar">AR</span>
+            </div>
+            <span class="nav-cluster-sep" aria-hidden="true"></span>
+            <span class="nav-cluster-icone">
+              <button type="button" class="nav-vetro-btn" id="nav-vetro" aria-label="Toggle 3D mode" aria-pressed="false" title="3D mode">
+                <span class="nav-vetro-testo" aria-hidden="true">3D</span>
+              </button>
+            </span>
+            <a href="#contact" class="btn-primary-pill">
+              <span class="btn-text-flip">
+                <span class="btn-text-front"><span data-i18n="nav_get_in_touch">GET IN TOUCH</span></span>
+                <span class="btn-text-back"><span data-i18n="nav_get_in_touch">GET IN TOUCH</span></span>
+              </span>
+              <span class="btn-primary-pill-icon">
+                <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span>
+            </a>
+          </div>
+          <button type="button" class="menu-text-btn" id="mo" aria-expanded="false" aria-controls="panel"><span data-i18n="menu_title"><span data-i18n="ft_menu">MENU</span></span></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Navigation Overlay Drawer -->
+    <div id="veil" aria-hidden="true"></div>
+    <aside id="panel" aria-label="Navigation Menu">
+      <div class="panel-header">
+        <span class="panel-tag">Navigation</span>
+        <button type="button" class="panel-close" id="mc" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="panel-nav">
+        <a href="#hero" class="panel-nav-item active"><span><span data-i18n="menu_home">Home</span></span><span class="num">01</span></a>
+        <a href="#about" class="panel-nav-item"><span>About Me</span><span class="num">02</span></a>
+        <a href="#profile" class="panel-nav-item"><span>Profile</span><span class="num">03</span></a>
+        <a href="#work" class="panel-nav-item"><span><span data-i18n="menu_projects">Projects</span></span><span class="num">04</span></a>
+        <a href="#contact" class="panel-nav-item"><span><span data-i18n="menu_contact">Contact</span></span><span class="num">05</span></a>
+      </nav>
+      <div class="panel-bio">
+        <div class="panel-bio-top">
+          <div class="panel-avatar">YR</div>
+          <div class="panel-bio-info">
+            <h4>Youssof Rezk</h4>
+            <p>WordPress Developer</p>
+          </div>
+        </div>
+        <p class="panel-bio-desc">Custom themes, plugins and high-performance websites built for real impact.</p>
+      </div>
+      <div class="panel-actions" style="display:flex; flex-direction:column; gap:0.5rem;">
+        <a href="#contact" class="btn-primary-pill" style="width:100%;justify-content:space-between">
+          <span class="btn-text-flip">
+            <span class="btn-text-front"><span data-i18n="nav_get_in_touch">GET IN TOUCH</span></span>
+            <span class="btn-text-back"><span data-i18n="nav_get_in_touch">GET IN TOUCH</span></span>
+          </span>
+          <span class="btn-primary-pill-icon">
+            <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+        <a href="assets/Youssof_Rezk_CV.pdf" download class="btn-primary-pill" style="width:100%;justify-content:space-between; background:transparent; border: 1px solid rgba(255,255,255,0.1);">
+          <span class="btn-text-flip">
+            <span class="btn-text-front" style="color:#fff"><span data-i18n="drawer_cv"><span data-i18n="about_cv">DOWNLOAD CV</span></span></span>
+            <span class="btn-text-back" style="color:#fff"><span data-i18n="drawer_cv"><span data-i18n="about_cv">DOWNLOAD CV</span></span></span>
+          </span>
+          <span class="btn-primary-pill-icon" style="background:rgba(255,255,255,0.05); color:#fff;">
+            <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(90deg);"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(90deg);"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="panel-soc">
+        <a href="https://www.linkedin.com/in/youssof-rezk-144987234" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/yosofAtef" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:yosofatef00@gmail.com" target="_blank" rel="noopener">Email</a>
+      </div>
+    </aside>
+
+    <!-- Hero Main Headline & Call to Actions -->
+    <div class="hero-body">
+      <div class="hero-spacer"></div>
+
+      <div class="hero-paragraph-wrapper">
+        <p class="hero-paragraph" data-i18n="hero_p">
+          Custom WordPress themes, plugins, WooCommerce stores and performance optimizations built for <span class="highlight">speed, usability and business growth.</span>
+        </p>
+        <div class="hero-cta-mobile">
+          <a href="#work" class="btn-primary-pill">
+            <span class="btn-text-flip">
+              <span class="btn-text-front"><span data-i18n="hero_cta">VIEW PROJECTS</span></span>
+              <span class="btn-text-back"><span data-i18n="hero_cta">VIEW PROJECTS</span></span>
+            </span>
+            <span class="btn-primary-pill-icon">
+              <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <h1 class="title-row-1 line"><span><span data-i18n="hero_title_1">WORDPRESS</span></span></h1>
+      <h1 class="title-row-2 line"><span><span data-i18n="hero_title_2">DEVELOPER</span></span></h1>
+
+      <div class="footer-left-col">
+        <div class="footer-meta-item">MANSOURA, EG</div>
+        <div class="footer-meta-item">FREELANCE / FULL-TIME</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section class="sec intro" id="about">
+      <div class="lcol">
+        <span class="tag" style="margin-bottom: 2rem; display: block;"><span data-i18n="about_tag">ABOUT ME</span></span>
+        <img src="assets/images/youssof-profile.jpg" alt="Youssof Rezk" class="profile-img">
+      </div>
+      <div class="rcol">
+        <h2 class="intro-title">I build scalable WordPress websites and WooCommerce solutions that combine custom design with clean, high-performance code.</h2>
+        <div class="intro-bottom">
+          <p class="desc">Based in Mansoura, Egypt. I focus on custom child themes, plugin development, custom post types, shortcodes and performance optimization so your website stays fast and easy to maintain.</p>
+          <a href="#contact" class="btn-primary-pill">
+            <span class="btn-text-flip">
+              <span class="btn-text-front"><span data-i18n="nav_get_in_touch">GET IN TOUCH</span></span>
+              <span class="btn-text-back"><span data-i18n="nav_get_in_touch">GET IN TOUCH</span></span>
+            </span>
+            <span class="btn-primary-pill-icon">
+              <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services & Skills Section -->
+    <section class="sec skills">
+      <div class="lcol"><span class="tag">Services</span></div>
+      <div class="rcol">
+        <h2 class="h2">Skills &amp; Services</h2>
+        <p class="desc">What I build across e-commerce, booking systems, corporate platforms and business websites.</p>
+        <div class="cards">
+          <div class="card">
+            <div>
+              <div class="card-top">
+                <h3 class="card-title">CUSTOM<br>THEMES</h3>
+                <svg class="card-ico" viewBox="0 0 60 60"><rect x="5" y="5" width="50" height="50" rx="3"/><line x1="5" y1="18" x2="55" y2="18"/><rect x="12" y="26" width="36" height="20" rx="1" stroke-dasharray="3 3"/></svg>
+              </div>
+            </div>
+            <div>
+              <p class="card-desc">Custom themes and child themes with PHP, CSS and JavaScript, extending WordPress and WooCommerce through hooks instead of editing core files.</p>
+              <a href="#work" class="btn-primary-pill">
+                <span class="btn-text-flip">
+                  <span class="btn-text-front"><span data-i18n="srv_btn">LEARN MORE</span></span>
+                  <span class="btn-text-back"><span data-i18n="srv_btn">LEARN MORE</span></span>
+                </span>
+                <span class="btn-primary-pill-icon">
+                  <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <div class="card-top">
+                <h3 class="card-title"><span data-i18n="srv_title_1">PLUGIN</span><br><span data-i18n="srv_title_1_sub">DEVELOPMENT</span></h3>
+                <svg class="card-ico" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_402_1610)"><path d="M17.6336 11.5653L12.2393 16.9596L15.3514 20.0717C16.841 21.5613 19.2561 21.5613 20.7457 20.0717C22.2353 18.5821 22.2353 16.167 20.7457 14.6774L17.6336 11.5653Z" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/><path d="M6.80931 11.2036L12.2036 5.80925L9.09151 2.69715C7.60192 1.20755 5.18681 1.20756 3.69721 2.69715C2.20762 4.18675 2.20762 6.60186 3.69721 8.09146L6.80931 11.2036Z" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/><path d="M13.1909 15.4215L11.2393 13.4699" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/><path d="M16.0955 12.5169L14.1439 10.5653" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/><path d="M20.7456 20.0717L21.9904 21.3165" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/><path d="M3.69714 2.69713L2.4523 1.45229" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/><path d="M11.4094 17.7895L18.4635 10.7354" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/><path d="M13.0334 4.97935L5.97936 12.0334" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/></g><defs><clipPath id="clip0_402_1610"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>
+              </div>
+            </div>
+            <div>
+              <p class="card-desc">Custom plugins built on Custom Post Types, ACF fields and reusable shortcodes, plus integrations like Amelia booking and Polylang.</p>
+              <a href="#work" class="btn-primary-pill">
+                <span class="btn-text-flip">
+                  <span class="btn-text-front"><span data-i18n="srv_btn">LEARN MORE</span></span>
+                  <span class="btn-text-back"><span data-i18n="srv_btn">LEARN MORE</span></span>
+                </span>
+                <span class="btn-primary-pill-icon">
+                  <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div>
+              <div class="card-top">
+                <h3 class="card-title">WOOCOMMERCE<br>&amp; SPEED</h3>
+                <svg class="card-ico fill-ico" viewBox="0 0 980.954 980.955" fill="currentColor"><path d="M980.954,154.181H794.946l-281.25,499.875c-15.543-5.318-32.201-8.209-49.523-8.209c-4.571,0-9.095,0.213-13.565,0.605 l116.502-205.108l26.405,14.998l90.682-159.651l-26.405-14.998l0,0l-111.616-63.397l-334.3-189.881l-90.682,159.65l26.406,14.999 L0,462.923l373.914,212.381c-11.394,8.324-21.608,18.17-30.323,29.252L48.999,538.806l-33.344,59.262l298.764,168.1 c-2.345,10.641-3.593,21.689-3.593,33.025c0,84.557,68.791,153.346,153.346,153.346c84.556,0,153.347-68.791,153.347-153.346 c0-42.768-17.606-81.496-45.942-109.336l208.956-371.383l200.422-0.084V154.181z M373.12,333.767l-40.116,70.37l-30.351-17.302 l40.115-70.371L373.12,333.767z M237.418,121.127l250.08,142.045l77.579,44.064l26.405,14.998l-23.513,41.395l-26.405-14.998 l-301.253-171.11l-26.406-14.998L237.418,121.127z M284.736,280.958l-74.835,131.274l148.501,84.656l74.967-131.506l74.61,42.378 L393.965,608.49L92.712,437.38l114.014-200.73L284.736,280.958z M549.519,799.193c0,47.061-38.286,85.346-85.347,85.346 c-45.967,0-83.542-36.533-85.263-82.088c-0.041-1.084-0.083-2.166-0.083-3.258c0-23.666,9.687-45.105,25.297-60.58 c15.432-15.299,36.654-24.766,60.049-24.766c5.159,0,10.204,0.486,15.113,1.367c23.739,4.262,44.092,18.361,56.685,37.926 C544.529,766.437,549.519,782.238,549.519,799.193z M912.954,250.418l-94.153,0.039l15.91-28.277h78.243V250.418z"/></svg>
+              </div>
+            </div>
+            <div>
+              <p class="card-desc">Fully customized WooCommerce stores, AJAX interactions, and caching setups with LiteSpeed, Breeze, Redis and WebP.</p>
+              <a href="#work" class="btn-primary-pill">
+                <span class="btn-text-flip">
+                  <span class="btn-text-front"><span data-i18n="srv_btn">LEARN MORE</span></span>
+                  <span class="btn-text-back"><span data-i18n="srv_btn">LEARN MORE</span></span>
+                </span>
+                <span class="btn-primary-pill-icon">
+                  <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile & Toolbox Section -->
+    <section class="sec prof" id="profile">
+      <div class="lcol"><span class="tag">Profile</span></div>
+      <div class="rcol">
+        <h2 class="h2">Toolbox &amp; Background</h2>
+        <div class="pgrid">
+          <div class="pg">
+            <h4>Web development</h4>
+            <div class="chips"><span>JavaScript</span><span>HTML</span><span>CSS3</span><span>Bootstrap</span><span>AJAX</span><span>PHP</span></div>
+          </div>
+          <div class="pg">
+            <h4><span data-i18n="skill_wp">WordPress</span></h4>
+            <div class="chips"><span><span data-i18n="skill_wp">WordPress</span></span><span>WooCommerce</span><span>Elementor Pro</span><span>ACF</span><span>Custom Post Types</span><span>Child Themes</span><span>Custom Plugins</span><span>Shortcodes</span><span>Polylang</span></div>
+          </div>
+          <div class="pg">
+            <h4><span data-i18n="skill_perf">Performance</span></h4>
+            <div class="chips"><span>LiteSpeed Cache</span><span>Breeze Cache</span><span>Redis Object Cache Pro</span><span>WebP</span></div>
+          </div>
+          <div class="pg">
+            <h4>Workflow</h4>
+            <div class="chips"><span>Git</span><span>GitHub</span><span>Cursor</span><span>GitHub Copilot</span><span>Codex</span><span>Antigravity</span><span>Claude</span><span>ChatGPT</span></div>
+          </div>
+        </div>
+        <div class="pfacts">
+          <div><span class="l">Education</span>B.Sc. Entomology and Chemistry, Al-Azhar University, 2025</div>
+          <div><span class="l">Languages</span>Arabic (native), English (B1)</div>
+          <div><span class="l">Availability</span>Immediately available. Hybrid, on-site and remote</div>
+          <div><span class="l">Leadership</span>Head of R&amp;D Committee, AZ-SENCS Student Team</div>
+        </div>
+        <div style="margin-top: 40px;">
+          <a href="assets/Youssof_Rezk_CV.pdf" download class="btn-primary-pill" style="display: inline-flex; width: auto; padding-right: 8px; padding-left: 32px;">
+            <span class="btn-text-flip">
+              <span class="btn-text-front"><span data-i18n="about_cv">DOWNLOAD CV</span></span>
+              <span class="btn-text-back"><span data-i18n="about_cv">DOWNLOAD CV</span></span>
+            </span>
+            <span class="btn-primary-pill-icon">
+              <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Showcase Section -->
+    <section class="work" id="work">
+      <div class="sec" style="background:transparent">
+        <div class="lcol"><span class="tag"><span data-i18n="menu_projects">Projects</span></span></div>
+        <div class="rcol">
+          <h2 class="h2">Selected Work</h2>
+          <p class="desc">Seven WordPress projects: corporate platforms, e-commerce, travel, booking and business websites.</p>
+        </div>
+      </div>
+      <div class="work-list" id="wl"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="sec contact" id="contact">
+      <div class="lcol"><span class="tag"><span data-i18n="menu_contact">Contact</span></span></div>
+      <div class="rcol">
+        <h2 class="h2">Let's work together</h2>
+        <p class="desc">Tell me about your project and I'll get back to you as soon as possible.</p>
+        <div class="contact-grid">
+          <div class="info">
+            <div><span class="l">Email</span><a href="mailto:yosofatef.yosof@gmail.com">yosofatef.yosof@gmail.com</a></div>
+            <div><span class="l">Phone</span><a href="tel:+201060078679">+20 106 007 8679</a></div>
+            <div><span class="l">Location</span>Mansoura, Egypt // Hybrid, on-site, remote</div>
+            <div><span class="l">Elsewhere</span><a href="https://www.linkedin.com/in/youssof-rezk-144987234" target="_blank" rel="noopener">LinkedIn</a> &nbsp;/&nbsp; <a href="https://github.com/yosofAtef" target="_blank" rel="noopener">GitHub</a></div>
+          </div>
+          <form class="ct-form" id="cf">
+            <p class="ct-convo">
+              Hi, I'm <input class="ct-in" name="n" placeholder="your name" required aria-label="Your name"> and my email is <input class="ct-in" type="email" name="e" placeholder="you@email.com" required aria-label="Your email">. Talk soon!
+            </p>
+            <div>
+              <p class="ct-label"><span data-i18n="contact_lbl">In one line, what do you need?</span></p>
+              <textarea class="ct-ta" name="m" rows="2" aria-label="Message" placeholder="e.g. a company site, a WooCommerce store, a custom plugin..."></textarea>
+            </div>
+            <div class="ct-foot">
+              <span class="ct-priv"><span data-i18n="contact_priv">Opens your email app with the message filled in.</span></span>
+              <button type="submit" class="btn-primary-pill">
+                <span class="btn-text-flip">
+                  <span class="btn-text-front">SEND</span>
+                  <span class="btn-text-back">SEND</span>
+                </span>
+                <span class="btn-primary-pill-icon">
+                  <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                  <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </span>
+              </button>
+            </div>
+            <p class="ok" style="color:#00ffcd;font-size:14px"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Component -->
+  <footer class="ft">
+    <div class="fg">
+      <div>
+        <h4><span data-i18n="menu_title"><span data-i18n="ft_menu">MENU</span></span></h4>
+        <ul>
+          <li><a href="#hero"><span data-i18n="menu_home">Home</span></a></li>
+          <li><a href="#about"><span data-i18n="menu_about">About</span></a></li>
+          <li><a href="#work"><span data-i18n="menu_projects">Projects</span></a></li>
+          <li><a href="#contact"><span data-i18n="menu_contact">Contact</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span data-i18n="ft_social">SOCIAL</span></h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/youssof-rezk-144987234" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/yosofAtef" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:yosofatef.yosof@gmail.com">Email</a></li>
+        </ul>
+      </div>
+      <div class="mk">YR</div>
+      <div class="fc">
+        <span data-i18n="ft_msg_1">Tell me about your project.</span><br><span data-i18n="ft_msg_2">Let's work together.</span><br><br>
+        <span class="fc-contact-info">
+          • +20 106 007 8679<br>
+          • <a href="mailto:yosofatef.yosof@gmail.com" class="ft-mail-link">yosofatef.yosof@gmail.com</a>
+        </span>
+      </div>
+      <div class="fr2">
+        <a href="#contact" class="btn-primary-pill">
+          <span class="btn-text-flip">
+            <span class="btn-text-front"><span data-i18n="nav_get_in_touch">GET IN TOUCH</span></span>
+            <span class="btn-text-back"><span data-i18n="nav_get_in_touch">GET IN TOUCH</span></span>
+          </span>
+          <span class="btn-primary-pill-icon">
+            <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+        <p>Mansoura, EG<br><time id="clk2">--:--:--</time></p>
+      </div>
+    </div>
+    <div class="bn-wrap"><div class="big-n" id="bn" aria-label="YOUSSOF REZK"></div></div>
+    <div class="fb">
+      <span>© <span id="yr"></span> YOUSSOF REZK. ALL RIGHTS RESERVED.</span>
+      <nav><a href="#hero"><span data-i18n="ft_back">Back to top</span></a></nav>
+    </div>
+  </footer>
+
+  <!-- Case Study Dynamic Modal Dialog -->
+  <div id="case" role="dialog" aria-modal="true" aria-label="Case study modal" data-lenis-prevent>
+    <div class="in" id="ci"></div>
+  </div>
+
+  <!-- Mac-like Popup Menu -->
+  <div class="mac-popup-menu" id="macPopupMenu">
+    <div class="mac-popup-header">
+      <div class="mac-popup-dots">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="mac-popup-title">youssofrezk — /Menu</div>
+    </div>
+    <div class="mac-popup-body">
+      <a href="#hero" class="mac-folder">
+        <svg viewBox="0 0 24 24" fill="#00ffcd"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+        <span><span data-i18n="menu_home">Home</span></span>
+      </a>
+      <a href="#about" class="mac-folder">
+        <svg viewBox="0 0 24 24" fill="#00ffcd"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+        <span><span data-i18n="menu_about">About</span></span>
+      </a>
+      <a href="#work" class="mac-folder">
+        <svg viewBox="0 0 24 24" fill="#00ffcd"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+        <span><span data-i18n="menu_projects">Projects</span></span>
+      </a>
+      <a href="#contact" class="mac-folder">
+        <svg viewBox="0 0 24 24" fill="#00ffcd"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+        <span><span data-i18n="menu_contact">Contact</span></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Floating Dock -->
+  <div class="floating-dock" id="floatingDock">
+    <button type="button" class="dock-btn" id="dockTopBtn" aria-label="Scroll to top">
+      <span class="dock-logo">YR</span>
+    </button>
+    <button type="button" class="dock-btn" id="dockMenuBtn" aria-label="Open menu">
+      <span>Menu</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- Core Third-Party Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <!-- Portfolio Data & Engine Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const langToggle = document.getElementById('lang-toggle');
+    if (langToggle) {
+      langToggle.addEventListener('change', (e) => {
+        // Disabled per user request
+      });
+    }
+  </script>
+</body>
+</html>
