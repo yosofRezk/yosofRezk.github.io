@@ -12,3 +12,6 @@ desktop.ini
 
 # Node (if used locally)
 node_modules/
+
+# Local raw asset folders with spaces/Arabic names (clean web versions tracked in assets/projects/rahal-plugin/)
+assets/projects/Rahal Plugin/

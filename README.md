@@ -41,7 +41,7 @@ This repository features a clean, production-grade frontend architecture separat
 ├── css/
 │   └── style.css        # Core Design Tokens, Components & Layout Stylesheet
 ├── js/
-│   ├── projects-data.js # Project catalog dataset (7 real-world WordPress builds)
+│   ├── projects-data.js # Project catalog dataset (8 real-world WordPress & Plugin builds)
 │   └── main.js          # Application Engine IIFE (Forms, Modal, GSAP & Lenis drivers)
 ├── assets/              # Images, videos, CV, and other static assets
 └── README.md            # Technical documentation & project reference
@@ -60,12 +60,14 @@ This repository features a clean, production-grade frontend architecture separat
 
 ## 🌐 Featured Projects
 
-1. **Rahal Travel** — Multilingual Tourism & Tour Booking Catalog.
-2. **FreshCart** — Customized E-Commerce WooCommerce Store.
-3. **Estik & Al Noor** — High-performance corporate portals.
-4. **DARR** — Corporate & Industrial Electrical Engineering Catalog Platform.
-5. **Xpress Prepaid** — Wireless Services Distributor Website.
-6. **Mudarar** — Usability & Multilingual Navigation Platform.
+1. **Rahal Booking System** — Standalone WordPress Booking Engine & Plugin ([GitHub Repository](https://github.com/yosofRezk/rahal-booking)).
+2. **Rahal Travel** — Multilingual Tourism & Tour Booking Catalog.
+3. **FreshCart** — Customized E-Commerce WooCommerce Store.
+4. **Steakhome** — Gourmet Restaurant Platform with Amelia Booking Integration.
+5. **Al-Nour Law Firm** — Custom Plugin Architecture & Shortcodes Platform.
+6. **DARR** — Corporate & Industrial Electrical Engineering Catalog Platform.
+7. **Xpress Prepaid** — Wireless Services Distributor Website.
+8. **Mudarar** — Usability & Multilingual Navigation Platform.
 
 *(Detailed case studies for each are available interactively within the portfolio itself).*
 
@@ -75,7 +77,7 @@ This repository features a clean, production-grade frontend architecture separat
 
 - **Email**: [yosofatef.yosof@gmail.com](mailto:yosofatef.yosof@gmail.com)
 - **LinkedIn**: [Youssof Rezk](https://www.linkedin.com/in/youssof-rezk-144987234)
-- **GitHub**: [@yosofAtef](https://github.com/yosofAtef)
+- **GitHub**: [@yosofRezk](https://github.com/yosofRezk)
 - **Location**: Mansoura, Egypt (Available for Remote, Hybrid & On-site roles)
 
 ---

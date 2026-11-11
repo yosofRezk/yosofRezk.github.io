@@ -4,17 +4,133 @@
  */
 const PROJECTS_CATALOG = [
   {
+    "name": "Rahal Booking System",
+    "badge": "STANDALONE WP PLUGIN",
+    "category": "WordPress Plugin, PHP 8+, Concurrency Locks, Shortcodes, Security",
+    "role": "Plugin Developer & Backend Architect",
+    "url": "https://rahal.duckdns.org/",
+    "githubUrl": "https://github.com/yosofRezk/rahal-booking",
+    "description": "A lightweight, standalone WordPress booking engine designed for travel agencies, tour operators, and activity providers. Rahal Booking allows you to attach a full-featured booking workflow to any existing Custom Post Type (CPT) without restructuring site content, relying on WooCommerce, or requiring commercial plugins.",
+    "features": [
+      "Zero Overbooking Guarantee: Prevents race conditions using dedicated database mutual exclusion locks via MySQL GET_LOCK(). Even under concurrent checkout attempts, seat availability remains strictly accurate.",
+      "Content Agnostic: Seamlessly binds to any existing custom post type (e.g. tour or trip) and custom fields (Post Meta).",
+      "Server-Authoritative Pricing: Calculates subtotals, currencies, and guest pricing strictly on the server side to eliminate client tampering.",
+      "Multi-Layered Security: Built-in honeypot trap for spam prevention, IP-based rate limiting (max 5 attempts/hour), and strict double-click debouncing.",
+      "Obfuscated Booking References: Generates human-friendly yet non-enumerable reference identifiers formatted as RHL-YYYY-NNNNN-XXXX.",
+      "Administrative Workflows: Native WP_List_Table interface with color-coded status badges (Pending, Confirmed, Cancelled, Expired, Completed) and manual booking creation.",
+      "Automated Dual-Email Notifications: Dispatches responsive HTML emails to customers (holding deadlines & bank details) and alerts to administrators with direct action links.",
+      "Theme-Adaptive Frontend: Booking forms and popup modals automatically inherit typography and color variables from your active theme or page builder."
+    ],
+    "technical": "Engineered as an independent WordPress plugin adhering to WP Core standards. Implements custom database table {prefix}rahl_bookings with MySQL GET_LOCK() for atomic reservations under high concurrent load. Features 5 dynamic shortcodes ([rahl_booking_form], [rahl_booking_button], [rahl_available_seats], [rahl_total_seats], [rahl_booked_seats]), native WP_List_Table administration, transactional SMTP filters, and complete uninstall cleanup.",
+    "stack": [
+      "WordPress Plugin API",
+      "PHP 8+",
+      "MySQL GET_LOCK()",
+      "WP_List_Table",
+      "Custom Shortcodes",
+      "AJAX / REST",
+      "Custom Post Types",
+      "ACF / Native Meta",
+      "Rate Limiting & Security",
+      "HTML5 / CSS3",
+      "Transactional SMTP"
+    ],
+    "highlights": "Architected with zero-overbooking MySQL concurrency locks, a 5-shortcode embed system, and native WP_List_Table management.",
+    "image": "assets/projects/rahal-plugin/rahal-plugin-cover.png",
+    "bannerImage": "assets/projects/rahal-plugin/rahal-plugin-banner.png",
+    "caseStudyImages": {
+      "overview": "assets/projects/rahal-plugin/rahal-tour-booking.png",
+      "features": "assets/projects/rahal-plugin/rahal-booking-modal.png",
+      "technical": "assets/projects/rahal-plugin/rahal-admin-dashboard.png",
+      "stack": "assets/projects/rahal-plugin/rahal-plugin-settings.png"
+    },
+    "role_ar": "مطور الإضافة ومهندس الواجهة الخلفية",
+    "category_ar": "إضافة ووردبريس مخصصة، PHP 8+، حماية التضارب، شورت كود، أمان",
+    "description_ar": "نظام ومحرك حجز متكامل وخفيف الوزن لووردبريس صُمم خصيصاً لوكالات السفر ومنظمي الرحلات والأنشطة السياحية. يتيح ربط دورة حجز كاملة بأي Custom Post Type موجود دون الحاجة لتغيير هيكل الموقع أو الاعتماد على ووكومرس أو إضافات مدفوعة.",
+    "features_ar": [
+      "ضمان منع الحجز الزائد (Zero Overbooking) باستخدام أقفال قواعد البيانات MySQL GET_LOCK() لمنع الـ Race Conditions.",
+      "مرونة تامة للارتباط بأي CPT وحقول بيانات مخصصة (Post Meta) دون أي قيود هيكلية.",
+      "حساب أسعار صارم من الخادم (Server-Authoritative Pricing) لمنع أي تلاعب من جانب العميل.",
+      "حماية أمنية متعددة الطبقات تشمل مصيدة سبام (Honeypot)، وتحديد معدل الطلبات حسب الـ IP لمنع التكرار، وحماية من النقر المزدوج.",
+      "أرقام حجز مشفرة واحترافية بنمط غير قابل للتخمين (RHL-YYYY-NNNNN-XXXX).",
+      "لوحة تحكم إدارية مدمجة بمعايير ووردبريس الأصيلة (WP_List_Table) لإدارة وتغيير حالات الحجوزات يدوياً وتلقائياً.",
+      "نظام إشعارات بريدية مزدوج وتلقائي يرسل فواتير HTML للعملاء وتنبيهات فورية لمدير الموقع مع روابط إجراءات مباشرة.",
+      "واجهة حجز تتكيف تلقائياً مع خطوط وألوان القالب المفعل دون تعارض."
+    ],
+    "technical_ar": "تم بناء الإضافة من الصفر معتمدة على معايير ووردبريس القياسية دون أي اعتمادات خارجية، مع جدول قاعدة بيانات مخصص {prefix}rahl_bookings ونظام 5 أكواد قصيرة (Shortcodes) مرنة.",
+    "extraHtml": `
+      <div>
+        <p class="k mu up" style="font-size:11px"><span style="color:var(--brand)">05 — Architecture & Shortcode Ecosystem</span></p>
+        <h3 class="h2" style="font-size:clamp(1.4rem, 2.5vw, 2rem);margin-top:0.75rem;margin-bottom:1rem;color:#fff;">Built for High Concurrency &amp; Zero Friction</h3>
+        
+        <div class="plugin-feature-grid">
+          <div class="plugin-feature-card">
+            <h4><span>🔒</span> Zero Overbooking Guarantee</h4>
+            <p>Utilizes MySQL <code>GET_LOCK()</code> mutex locking during reservation checkout. Prevents race conditions so multiple concurrent customers can never overbook remaining capacity.</p>
+          </div>
+          <div class="plugin-feature-card">
+            <h4><span>🛡️</span> Multi-Layered Security Shield</h4>
+            <p>Built-in honeypot anti-spam trap, client-side double-click debouncing, and IP-based rate limiting (maximum 5 booking submissions per hour) to stop automated bots.</p>
+          </div>
+          <div class="plugin-feature-card">
+            <h4><span>⚡</span> Content-Agnostic CPT Binding</h4>
+            <p>Binds seamlessly to any existing post type (tours, events, activities) and meta keys (seats, price, date) without modifying core tables or requiring ACF Pro.</p>
+          </div>
+          <div class="plugin-feature-card">
+            <h4><span>✉️</span> Automated Dual-Email Engine</h4>
+            <p>Instantly dispatches responsive HTML emails to customers with holding deadlines &amp; payment instructions, while alerting administrators with 1-click dashboard review links.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:2.5rem;">
+          <h4 style="font-family:var(--font-heading);font-size:1.1rem;color:#fff;margin-bottom:0.75rem;">Dynamic Shortcodes Reference</h4>
+          <div class="shortcode-list">
+            <div class="shortcode-item">
+              <span class="shortcode-tag">[rahl_booking_form tour_id="85"]</span>
+              <span class="shortcode-desc">Renders an embedded, fully responsive booking form with real-time price calculation and form validation.</span>
+            </div>
+            <div class="shortcode-item">
+              <span class="shortcode-tag">[rahl_booking_button tour_id="85" text="Reserve Your Spot"]</span>
+              <span class="shortcode-desc">Triggers an elegant modal popup reservation form. Automatically disables with a "Fully Booked" badge when capacity reaches zero.</span>
+            </div>
+            <div class="shortcode-item">
+              <span class="shortcode-tag">[rahl_available_seats tour_id="85"]</span>
+              <span class="shortcode-desc">Displays live remaining seats in real time to generate genuine urgency and boost conversion rates.</span>
+            </div>
+            <div class="shortcode-item">
+              <span class="shortcode-tag">[rahl_total_seats] &nbsp;|&nbsp; [rahl_booked_seats]</span>
+              <span class="shortcode-desc">Renders maximum seat capacity and active booked count for social proof and tour specification boxes.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="plugin-github-banner">
+          <div class="plugin-github-info">
+            <h4>Open Source Plugin Repository</h4>
+            <p>Explore clean, documented PHP code, database schema migrations, and admin hooks on GitHub.</p>
+          </div>
+          <a href="https://github.com/yosofRezk/rahal-booking" target="_blank" rel="noopener" class="btn-primary-pill" style="display:inline-flex;align-items:center;padding:0.75rem 1.4rem;">
+            <span class="btn-text-flip">
+              <span class="btn-text-front">VIEW GITHUB REPO ↗</span>
+              <span class="btn-text-back">VIEW GITHUB REPO ↗</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    `
+  },
+  {
     "name": "Rahal Travel",
     "category": "WordPress, Elementor, ACF, Multilingual",
     "role": "WordPress Developer",
     "url": "https://rahal.duckdns.org/",
-    "description": "Rahal is a travel website designed to showcase tours, destinations, and travel services through a structured and visually focused experience.",
+    "description": "Rahal is a travel website designed to showcase tours, destinations, and travel services through a structured and visually focused experience. Integrated with the custom Rahal Booking System plugin for real-time tour reservations.",
     "features": [
-      "Custom Tour content structure.",
+      "Custom Tour content structure with CPT UI & ACF.",
+      "Integrated with Rahal Booking System: Standalone custom booking engine with zero-overbooking MySQL locking.",
       "Organized destinations and travel services.",
-      "Custom tour and destination pages.",
-      "Responsive design.",
-      "Reusable and manageable content structure."
+      "Custom tour and destination pages with responsive layouts.",
+      "Manageable and scalable content architecture."
     ],
     "technical": "The project uses WordPress as a content management system, with custom content structures for tours and destinations, making it easier to manage and expand the website.",
     "stack": [
@@ -26,7 +142,7 @@ const PROJECTS_CATALOG = [
       "CSS",
       "JavaScript"
     ],
-    "highlights": "Custom Tour content structure.",
+    "highlights": "Custom Tour content structure paired with custom-engineered booking workflow.",
     "image": "assets/projects/rahal/rahal-image-poster.png",
     "bannerImage": "assets/projects/rahal/rahal-paner.png",
     "video": "assets/projects/rahal/Screen%20Recording%202026-10-08%20082138.mp4",
@@ -36,17 +152,17 @@ const PROJECTS_CATALOG = [
       "technical": "assets/projects/rahal/rahal-3.png",
       "stack": "assets/projects/rahal/rahal-4.png"
     },
-    "role_ar": "???? ????????",
-    "category_ar": "????????? ???????? ACF? ????? ??????",
-    "description_ar": "???? ?? ???? ????? ???? ???? ??????? ???????? ?????? ????? ?? ???? ????? ????? ??????.",
+    "role_ar": "مطور ووردبريس",
+    "category_ar": "ووردبريس، إليمنتور، ACF، متعدد اللغات",
+    "description_ar": "رحال هو موقع سياحي صُمم لعرض الجولات والوجهات والخدمات السياحية من خلال تجربة بصرية وتفاعلية منظمة، مدمج مع إضافة Rahal Booking System للحجز الفوري.",
     "features_ar": [
-      "????? ????? ?????? ???????.",
-      "????? ?????? ??? ?????.",
-      "????? ????? ??????? ????????.",
-      "????? ??????.",
-      "????? ????? ????? ?????? ????????? ????????."
+      "هيكلية مخصصة للرحلات والجولات باستخدام CPT وACF.",
+      "دمج كامل مع إضافة Rahal Booking System لحجز الجولات المباشر.",
+      "تنظيم الوجهات وباقات السفر بأسلوب سلس.",
+      "تصميم متجاوب وسريع للأجهزة المحمولة وسطح المكتب.",
+      "إدارة مرنة للمحتوى قابلة للتوسع والتطوير المستمر."
     ],
-    "technical_ar": "?????? ??????? ???????? ????? ?????? ???????? ?? ????? ????? ????? ??????? ???????? ?????? ????? ?????? ??????."
+    "technical_ar": "يعتمد المشروع على ووردبريس لإدارة المحتوى، مع هيكلة مخصصة للجولات والوجهات لتبسيط إدارة الموقع وتوسيعه مستقبلاً."
   },
   {
     "name": "FreshCart",

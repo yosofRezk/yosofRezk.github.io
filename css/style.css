@@ -963,14 +963,19 @@ input:checked + .slider:before {
   transform: scale(1.05);
 }
 
-.win video {
+.win video,
+.win img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 1;
-  transition: opacity 0.6s;
+  transition: opacity 0.6s, transform 0.6s ease;
+}
+
+.pr:hover .win img {
+  transform: scale(1.05);
 }
 
 .pr.play .win video.ok {
@@ -1347,6 +1352,106 @@ input:checked + .slider:before {
 #case .cs-reveal.visible .chips span:nth-child(6) { transition-delay: 0.3s; }
 #case .cs-reveal.visible .chips span:nth-child(7) { transition-delay: 0.35s; }
 #case .cs-reveal.visible .chips span:nth-child(8) { transition-delay: 0.4s; }
+
+/* Custom Plugin Case Study Elements */
+.plugin-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.plugin-feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.plugin-feature-card:hover {
+  border-color: rgba(0, 255, 205, 0.4);
+  transform: translateY(-2px);
+}
+
+.plugin-feature-card h4 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.plugin-feature-card p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.shortcode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.shortcode-item {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 255, 205, 0.2);
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
+  gap: 0.35rem;
+  transition: border-color 0.3s;
+}
+
+.shortcode-item:hover {
+  border-color: var(--brand);
+}
+
+.shortcode-tag {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.92rem;
+  color: #00ffcd;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.shortcode-desc {
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+}
+
+.plugin-github-banner {
+  margin-top: 2rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(0, 255, 205, 0.08), rgba(10, 10, 10, 0.6));
+  border: 1px solid rgba(0, 255, 205, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.plugin-github-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+
+.plugin-github-info p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
 
 /* ==========================================================================
    8. Contact Form & Footer Component

@@ -163,14 +163,25 @@
     if (!DOM.workListContainer || typeof PROJECTS_CATALOG === 'undefined') return;
 
     DOM.workListContainer.innerHTML = PROJECTS_CATALOG.map((project, index) => {
+      const isVideo = !!project.video;
       return `
         <article class="pr" data-i="${index}" tabindex="0" role="link" aria-label="Open ${project.name} Case Study">
-          <div class="shot" ${project.image ? `style="--img:url(${project.image})"` : ''}>
+          <div class="shot" ${project.image ? `style="--img:url('${project.image}')"` : ''}>
             <div class="win">
-              <video muted loop playsinline preload="none" ${project.image ? `poster="${project.image}"` : ''} ${project.video ? `data-src="${project.video}"` : ''}></video>
+              ${isVideo 
+                ? `<video muted loop playsinline preload="none" ${project.image ? `poster="${project.image}"` : ''} ${project.video ? `data-src="${project.video}"` : ''}></video>` 
+                : (project.image ? `<img src="${project.image}" alt="${project.name}">` : '')}
             </div>
           </div>
           <div class="pinfo">
+            ${project.badge ? `
+              <div class="pj-badge-wrap" style="margin-bottom:0.6rem;">
+                <span class="pj-badge" style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:999px;background:rgba(0,255,205,0.12);color:#00ffcd;border:1px solid rgba(0,255,205,0.35);display:inline-flex;align-items:center;gap:6px;">
+                  <span style="width:6px;height:6px;border-radius:50%;background:#00ffcd;box-shadow:0 0 8px #00ffcd;"></span>
+                  ${project.badge}
+                </span>
+              </div>
+            ` : ''}
             <h3 class="pj-title">${project.name}</h3>
             <div class="pj-detail">
               <b>${getP(project, 'category')}</b>
@@ -178,7 +189,8 @@
             </div>
             <div class="pj-actions">
               ${createPrimaryButtonHtml('<span data-i18n="case_open">OPEN CASE STUDY</span>', 'btn-case-trigger')}
-              ${createPrimaryButtonHtml('<span data-i18n="case_demo">LIVE DEMO ↗</span>', 'btn-live-pill', project.url, true)}
+              ${project.githubUrl ? createPrimaryButtonHtml('GITHUB ↗', 'btn-live-pill', project.githubUrl, true) : ''}
+              ${project.url ? createPrimaryButtonHtml('<span data-i18n="case_demo">LIVE DEMO ↗</span>', 'btn-live-pill', project.url, true) : ''}
             </div>
           </div>
         </article>
@@ -297,7 +309,10 @@
             <span class="btn-text-back">ALL PROJECTS</span>
           </span>
         </a>
-        ${createPrimaryButtonHtml('VISIT LIVE SITE ↗', 'btn-live-pill', project.url, true)}
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          ${project.githubUrl ? createPrimaryButtonHtml('GITHUB REPO ↗', 'btn-live-pill', project.githubUrl, true) : ''}
+          ${project.url ? createPrimaryButtonHtml('VISIT LIVE SITE ↗', 'btn-live-pill', project.url, true) : ''}
+        </div>
       </div>
 
       <div class="ct cs-reveal">
@@ -322,8 +337,11 @@
           <p style="${textStyle.replace('1.6', '1.7')}">${project.category.split(', ').join('<br>')}</p>
         </div>
         <div>
-          <p class="k" data-i18n="cs_p_live">Live site</p>
-          ${createPrimaryButtonHtml('<span data-i18n="case_demo">LIVE DEMO ↗</span>', 'btn-live-pill', project.url, true)}
+          <p class="k" data-i18n="cs_p_live">${project.githubUrl ? 'Source & Demo' : 'Live site'}</p>
+          <div style="display:flex;flex-direction:column;gap:0.4rem;align-items:flex-start;">
+            ${project.githubUrl ? createPrimaryButtonHtml('GITHUB ↗', 'btn-live-pill', project.githubUrl, true) : ''}
+            ${project.url ? createPrimaryButtonHtml('<span data-i18n="case_demo">LIVE DEMO ↗</span>', 'btn-live-pill', project.url, true) : ''}
+          </div>
         </div>
       </div>
 
@@ -360,6 +378,8 @@
         </div>
         ${getSectionMedia(stackImg, project.name)}
       </div>
+
+      ${project.extraHtml ? `<div class="cs-reveal" style="padding:40px 24px 60px;border-bottom:1px solid rgba(255,255,255,0.1);">${project.extraHtml}</div>` : ''}
 
       <div class="nx cs-reveal" id="nx" style="background: ${nxBg};">
         <p class="up mu" style="font-size:11px;color:var(--brand);position:relative;z-index:2;">Next project</p>
