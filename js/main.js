@@ -337,7 +337,7 @@
           <p style="${textStyle.replace('1.6', '1.7')}">${project.category.split(', ').join('<br>')}</p>
         </div>
         <div>
-          <p class="k" data-i18n="cs_p_live">${project.githubUrl ? 'Source & Demo' : 'Live site'}</p>
+          <p class="k" data-i18n="cs_p_live">${(project.githubUrl && !project.url) ? 'Source Code' : (project.githubUrl ? 'Source & Demo' : 'Live site')}</p>
           <div style="display:flex;flex-direction:column;gap:0.4rem;align-items:flex-start;">
             ${project.githubUrl ? createPrimaryButtonHtml('GITHUB ↗', 'btn-live-pill', project.githubUrl, true) : ''}
             ${project.url ? createPrimaryButtonHtml('<span data-i18n="case_demo">LIVE DEMO ↗</span>', 'btn-live-pill', project.url, true) : ''}

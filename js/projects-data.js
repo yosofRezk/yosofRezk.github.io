@@ -8,7 +8,7 @@ const PROJECTS_CATALOG = [
     "badge": "STANDALONE WP PLUGIN",
     "category": "WordPress Plugin, PHP 8+, Concurrency Locks, Shortcodes, Security",
     "role": "Plugin Developer & Backend Architect",
-    "url": "https://rahal.duckdns.org/",
+    "url": null,
     "githubUrl": "https://github.com/yosofRezk/rahal-booking",
     "description": "A lightweight, standalone WordPress booking engine for tour operators and travel agencies. Binds full reservation workflows to any existing Custom Post Type (CPT) with zero dependencies on WooCommerce or commercial plugins.",
     "features": [
@@ -276,7 +276,7 @@ const PROJECTS_CATALOG = [
     "name": "DARR",
     "category": "WordPress, Elementor Pro, ACF, Custom Post Types, Performance",
     "role": "WordPress Developer",
-    "url": "https://darr.tech-nya.com/",
+    "url": "http://darr-tech.duckdns.org/",
     "description": "Darr is a larger WordPress project where the focus was on building a professional interface while keeping the content structured and manageable through WordPress.",
     "features": [
       "Elementor-based website development.",
