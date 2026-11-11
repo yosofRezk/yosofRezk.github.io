@@ -61,13 +61,13 @@ This repository features a clean, production-grade frontend architecture separat
 ## 🌐 Featured Projects
 
 1. **Rahal Booking System** — Standalone WordPress Booking Engine & Plugin ([GitHub Repository](https://github.com/yosofRezk/rahal-booking)).
-2. **Rahal Travel** — Multilingual Tourism & Tour Booking Catalog.
-3. **FreshCart** — Customized E-Commerce WooCommerce Store.
-4. **Steakhome** — Gourmet Restaurant Platform with Amelia Booking Integration.
-5. **Al-Nour Law Firm** — Custom Plugin Architecture & Shortcodes Platform.
-6. **DARR** — Corporate & Industrial Electrical Engineering Catalog Platform.
-7. **Xpress Prepaid** — Wireless Services Distributor Website.
-8. **Mudarar** — Usability & Multilingual Navigation Platform.
+2. **FreshCart** — Customized E-Commerce WooCommerce Store.
+3. **Steakhome** — Gourmet Restaurant Platform with Amelia Booking Integration.
+4. **Al-Nour Law Firm** — Custom Plugin Architecture & Shortcodes Platform.
+5. **DARR** — Corporate & Industrial Electrical Engineering Catalog Platform.
+6. **Xpress Prepaid** — Wireless Services Distributor Website.
+7. **Mudarar** — Usability & Multilingual Navigation Platform.
+8. **Rahal Travel** — Multilingual Tourism & Tour Booking Catalog.
 
 *(Detailed case studies for each are available interactively within the portfolio itself).*
 
